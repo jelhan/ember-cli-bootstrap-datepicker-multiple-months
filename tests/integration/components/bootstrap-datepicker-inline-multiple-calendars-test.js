@@ -58,8 +58,8 @@ test('all calendar show same dates', function(assert) {
   this.render(hbs`
     {{bootstrap-datepicker-inline-multiple-months count=2 multidate=true value=dates}}
   `);
-  var dates = [new Date(2015, 0, 1), new Date(2015, 4, 1)];
-  var datepickers = this.$().children().eq(0).children();
+  let dates = [new Date(2015, 0, 1), new Date(2015, 4, 1)];
+  let datepickers = this.$().children().eq(0).children();
   datepickers.eq(0).datepicker('setDates', dates);
   assert.deepEqual(
     datepickers.eq(1).datepicker('getDates').map((date) => date.toISOString()),
