@@ -1,5 +1,8 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import Ember from 'ember';
+
+const { run } = Ember;
 
 moduleForComponent('bootstrap-datepicker-inline-multiple-months', 'Integration | Component | bootstrap datepicker inline multiple months', {
   integration: true
@@ -33,12 +36,16 @@ test('it shows month in correct order', function(assert) {
     this.$('.datepicker .datepicker-switch:visible').toArray().map((el) => $(el).text()),
     ['November 2015', 'December 2015', 'January 2016', 'February 2016']
   );
-  this.$('.datepicker:visible').first().find('.next:visible').click();
+  run(() => {
+    this.$('.datepicker:visible').first().find('.next:visible').click();
+  });
   assert.deepEqual(
     this.$('.datepicker .datepicker-switch:visible').toArray().map((el) => $(el).text()),
     ['December 2015', 'January 2016', 'February 2016', 'March 2016']
   );
-  this.$('.datepicker:visible').last().find('.prev:visible').click();
+  run(() => {
+    this.$('.datepicker:visible').last().find('.prev:visible').click();
+  });
   assert.deepEqual(
     this.$('.datepicker .datepicker-switch:visible').toArray().map((el) => $(el).text()),
     ['November 2015', 'December 2015', 'January 2016', 'February 2016']
