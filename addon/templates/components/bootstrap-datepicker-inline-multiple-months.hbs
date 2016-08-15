@@ -1,0 +1,35 @@
+{{#each calendars as |calendar index|}}
+  {{bootstrap-datepicker-inline
+    changeDate=(action "dateChanged" index)
+    changeMonth=(action "monthChanged" index)
+    defaultViewDate=calendar.defaultViewDate
+
+    value=value
+    autoclose=autoclose
+    calendarWeeks=calendarWeeks
+    clearBtn=clearBtn
+    container=widgetContainer
+    daysOfWeekDisabled=daysOfWeekDisabled
+    disableTouchKeyboard=disableTouchKeyboard
+    enableOnReadonly=enableOnReadonly
+    endDate=endDate
+    forceParse=forceParse
+    format=format
+    immediateUpdates=immediateUpdates
+    keyboardNavigation=keyboardNavigation
+    language=language
+    maxViewMode=maxViewMode
+    minViewMode=minViewMode
+    multidate=multidate
+    multidateSeparator=multidateSeparator
+    orientation=orientation
+    showOnFocus=showOnFocus
+    startDate=startDate
+    startView=startView
+    todayBtn=todayBtn
+    todayHighlight=todayHighlight
+    toggleActive=toggleActive
+    weekStart=weekStart
+    datesDisabled=datesDisabled
+  }}
+{{/each}}

@@ -1,0 +1,11 @@
+<form>
+  <label>number of calendars to show</label>
+  {{input value=count type="number" class="form-control"}}
+</form>
+
+{{bootstrap-datepicker-inline-multiple-months
+  count=count
+  value=dates
+
+  multidate=true
+}}

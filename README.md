@@ -1,12 +1,21 @@
-# Ember-cli-bootstrap-datepicker-multiple-calendars
+# ember-cli-bootstrap-datepicker-multiple-months
 
-This README outlines the details of collaborating on this Ember addon.
+Provides an {{bootstrap-datepicker-inline}} calendar as a datepicker showing
+multiple month at once.
+
+```hbs
+  {{bootstrap-datepicker-inline-multiple-months
+    count=3
+  }}
+```
+
+Supports all options of `{{boostrap-datepicker}}` but currently no events.
+Have a look at [ember-cli-bootstrap-datepicker](https://github.com/soulim/ember-cli-bootstrap-datepicker)
+for details.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install ember-cli-bootstrap-datepicker-multiple-months`
 
 ## Running
 
